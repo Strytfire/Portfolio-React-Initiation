@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "font-1";
+    src: url('../asset/font/BAHNSCHRIFT.TTF');
+}
+
+//variable Couleur et autre ICI :
+$font-1: "font-1", sans-serif;
+
+$color-1: #db6b49;
+$color-2: #35312c;
+$color-3: #eceff4;
+//Mixine ICI
+
+
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: $font-1;
+
+}
+
+body{
+    background-color: $color-3;
+    overflow: overlay;
+}
+
+li{
+    list-style-type: none;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background: transparent;
+    opacity: 0.5;
+   
+}
+  
+::-webkit-scrollbar-corner {
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #db6b49a2;
+    border-radius: 10px;
+}

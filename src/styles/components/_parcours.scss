@@ -1,0 +1,301 @@
+
+.parcours-content-bg{
+    background-color: $color-2;
+    position: relative;
+    top: 330px;
+    height: 820px;
+
+.mask-content-parcours{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    
+    svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 79px;
+    }
+    
+    .shape-fill {
+        fill: #eceff4;
+    }
+}
+.parcours-content{
+    position: relative;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+    margin: -10px 12%;
+    color: $color-3;
+    .flex{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 49px;
+    }
+    
+        .title-parcours{
+            padding-bottom: 50px;
+            display: flex;
+            position: relative;
+            width: 45%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: stretch;
+            justify-content: flex-start;
+            align-items: center;
+            transition: all 0.4s;
+            span{
+                content: "";
+                background-color: #db6b49;
+                width: 5px;
+                height: 25px;
+                margin: -6px 6px 0px 0px;
+                border-radius: 10px;
+            }
+        }
+        .bc-timeline{
+            &:nth-child(2){
+                padding-left: 200px;
+            }
+            padding: 10px;
+            width: 700px;
+            padding-left: 147px;
+            transition: all 0.4s;
+            border-radius: 10px;
+            &:hover{
+                transition: all 0.4s;
+                background-color: $color-3;
+                border-radius: 10px;
+                color: $color-2;
+                box-shadow: rgb(99 99 99 / 30%) 0px 2px 8px 0px;
+                .timeline{
+                    border-left: 3px solid $color-2;
+                    li{
+                    border-bottom: 1px solid $color-2;
+                    }
+                }
+            }
+            
+            .timeline{
+                border-left: 3px solid $color-3;
+                border-bottom-right-radius: 4px;
+                border-top-right-radius: 4px;
+                margin: 0 auto;
+                letter-spacing: 0.2px;
+                position: relative;
+                line-height: 1.4em;
+                font-size: 1.03em;
+                padding: 50px;
+                list-style: none;
+                text-align: left;
+                /* max-width: 50%; */
+                width: 543px;
+                li{
+                    border-bottom: 1px solid $color-3;
+                    padding-bottom: 25px;
+                    margin-bottom: 25px;
+                    position: relative;
+                    p:nth-child(2){
+                        margin-bottom: 10px;
+                        span{
+                            color: $color-1;
+                        }
+                    }
+                    &::before{
+                        left: -241px;
+                        content: attr(data-date);
+                        text-align: right;
+                        min-width: 158px;
+                        position: absolute;
+                    }
+                    &::after{
+                        position: absolute;
+                        display: block;
+                        -webkit-box-shadow: 0 0 0 3px $color-1;
+                        box-shadow: 0 0 0 3px $color-1;
+                        left: -55.8px;
+                        background: #fff;
+                        border-radius: 50%;
+                        height: 9px;
+                        width: 9px;
+                        content: "";
+                        top: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .mask-content-parcours-end{
+        z-index: -1;
+        position: absolute;
+        top: 819px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    
+    svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 79px;
+    }
+    
+    .shape-fill {
+        fill: $color-2;
+    }
+}
+}
+
+@media screen and (max-width: 1450px) {
+
+    .parcours-content-bg{
+        background-color: $color-2;
+        position: relative;
+        top: 330px;
+        height: 1350px;
+    
+    .mask-content-parcours{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 79px;
+        }
+        
+        .shape-fill {
+            fill: #eceff4;
+        }
+    }
+    .parcours-content{
+        position: relative;
+        top: 140px;
+        display: flex;
+        flex-direction: column;
+        margin: -10px 12%;
+        color: $color-3;
+        .flex{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 49px;
+            flex-direction: column;
+        }
+        
+            .title-parcours{
+                padding-bottom: 100px;
+                display: flex;
+                position: relative;
+                width: 45%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: stretch;
+                justify-content: flex-start;
+                align-items: center;
+                transition: all 0.4s;
+                span{
+                    content: "";
+                    background-color: #db6b49;
+                    width: 5px;
+                    height: 25px;
+                    margin: -6px 6px 0px 0px;
+                    border-radius: 10px;
+                }
+            }
+            .bc-timeline{
+                padding: 10px;
+                width: 700px;
+                padding-left: 147px;
+                transition: all 0.4s;
+                &:hover{
+                    transition: all 0.4s;
+                    background-color: rgba(255, 255, 255, 0.397);
+                    border-radius: 10px;
+                    box-shadow: rgb(99 99 99 / 30%) 0px 2px 8px 0px;
+                }
+                
+                .timeline{
+                    border-left: 3px solid $color-3;
+                    border-bottom-right-radius: 4px;
+                    border-top-right-radius: 4px;
+                    margin: 0 auto;
+                    letter-spacing: 0.2px;
+                    position: relative;
+                    line-height: 1.4em;
+                    font-size: 1.03em;
+                    padding: 50px;
+                    list-style: none;
+                    text-align: left;
+                    /* max-width: 50%; */
+                    width: 543px;
+                    li{
+                        border-bottom: 1px solid $color-2;
+                        padding-bottom: 25px;
+                        margin-bottom: 25px;
+                        position: relative;
+                        &::before{
+                            left: -207px;
+                            content: attr(data-date);
+                            text-align: right;
+                            min-width: 120px;
+                            position: absolute;
+                        }
+                        &::after{
+                            position: absolute;
+                            display: block;
+                            -webkit-box-shadow: 0 0 0 3px $color-1;
+                            box-shadow: 0 0 0 3px $color-1;
+                            left: -55.8px;
+                            background: #fff;
+                            border-radius: 50%;
+                            height: 9px;
+                            width: 9px;
+                            content: "";
+                            top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .mask-content-parcours-end{
+            z-index: -1;
+            position: absolute;
+            top: 1346px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 79px;
+        }
+        
+        .shape-fill {
+            fill: $color-2;
+        }
+    }
+    }
+
+
+
+
+}

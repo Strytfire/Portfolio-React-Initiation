@@ -1,0 +1,39 @@
+.bloc_container{
+    height: 261px;
+    width: 501px;
+    border-radius: 3px;
+    margin: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 14px 22px 21px;
+    position: relative;
+    box-shadow: 0 0 3px rgb(0 0 0 / 25%);
+    transition: all 0.3s ease-in-out;
+    grid-gap: 15px;
+    &::after{
+        top: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        left: -1px;
+        border-radius: 3px 0px 0px 3px;
+        background: #db6b49;
+        transform: scale(0);
+        transition: transform 0.2s ease-in-out;
+    }
+    &:hover::after{
+        transform: scale(1);
+    }
+    &:hover{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 3px 6px 0px;
+    }
+    img{
+        width: 20%;
+        margin: 7px;
+    }
+}

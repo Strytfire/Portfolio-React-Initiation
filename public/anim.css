@@ -1,0 +1,26 @@
+/* {
+    cursor: yes;
+}
+
+.cursor {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 100;
+    pointer-events: none;
+
+}
+
+.cursor::after{
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #db6b49;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+}

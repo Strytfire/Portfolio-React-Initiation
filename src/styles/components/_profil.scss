@@ -1,0 +1,192 @@
+
+@mixin animate($animation,$duration,$method,$times){
+    animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
+
+.content-profil{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    top: 100px;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    .text-profil{
+        @include keyframes(fade1){
+            0%{
+                opacity: 0;
+                }
+               50%{
+                opacity: 0.4;
+                }
+               100%{
+                opacity: 1;
+               }
+          }
+        @include animate(fade1, 1s, linear, 1);
+        span{
+            content: "";
+            background-color: $color-1;
+            width: 5px;
+            height: 25px;
+            margin: -23px 6px 0px 0px;
+            border-radius: 10px;
+        }
+        
+        h1{
+            padding-bottom: 20px;
+        }
+        display: flex;
+        position: relative;
+        width: 45%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: stretch;
+        justify-content: flex-start;
+        align-items: center;
+        transition: all 0.4s;
+        padding: 30px;
+        &:hover{
+            transition: all 0.4s;
+            background-color: rgba(255, 255, 255, 0.397);
+            border-radius: 10px;
+            box-shadow: rgb(99 99 99 / 30%) 0px 2px 8px 0px;
+        }
+    }
+    .profil-container{
+        @include keyframes(fade2){
+            0%{
+                opacity: 0;
+                top: -80px;
+                }
+               50%{
+                opacity: 0.7;
+                top: -45px;
+                }
+               100%{
+                opacity: 1;
+                top: 0px;
+               }
+          }
+        @include animate(fade2, 1s, linear, 1);
+        position: relative;
+        width: 400px;
+        height: 445px;
+        background-color: #f2f2f2;
+        border-radius: 6px;
+        .reseau-container{
+            @include keyframes(fade){
+                0%{
+                opacity: 0;
+                top: -60px;
+                z-index: -1;
+                transition: all 0.22s;
+                }
+               50%{
+                opacity: 0.5;
+                z-index: -1;
+                transition: all 0.22s;
+                }
+               100%{
+                opacity: 1;
+                transition: all 0.22s;
+               }
+              }
+            @include animate(fade, 1s, linear, 1);
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            top: 30px;
+            a{
+                height: 50px;
+                width: 50px;
+                display: flex;
+                background-color: #f2f2f2;
+                box-shadow: rgb(99 99 99 / 30%) 0px 2px 8px 0px;
+                border-radius: 10px;
+                align-items: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+                border-radius: 34px;
+                justify-content: space-around;
+                transition: ease-in-out 0.4s;
+                &:nth-child(1):hover{
+                    transition: all 0.22s;
+                    color: #e7e7e7;
+                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                }
+                &:nth-child(2):hover{
+                    transition: all 0.22s;
+                    color: #e7e7e7;
+                    background-color:  #5865F2;
+                }
+                &:nth-child(3):hover{
+                    transition: all 0.22s;
+                    color: #e7e7e7;
+                    background-color:  #0e76a8;
+                }
+                &:nth-child(4):hover{
+                    transition: all 0.22s;
+                    color: #e7e7e7;
+                    background-color:  #36393e;
+                }
+                &:nth-child(5):hover{
+                    transition: all 0.22s;
+                    color: #e7e7e7;
+                    background-color:  #1DA1F2;
+                }
+                &:nth-child(6):hover{
+                    transition: all 0.22s;
+                    color: #e7e7e7;
+                    background-color:  #6441a5;
+                }
+                &:hover{
+                    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1.2px;
+                    transition: ease-in-out 0.35s;
+                }
+            }
+        }
+        .in-profile{
+            width: 400px;
+            height: 445px;
+            transition: ease-in-out 0.3s;
+            border-radius: 6px;
+            box-shadow: rgb(99 99 99 / 30%) 0px 2px 8px 0px;
+            &:hover{
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1.2px;
+                transition: ease-in-out 0.3s;
+            }
+            .img-profil{
+                position: relative;
+                background: url(../../asset/images/photo.jpg) center no-repeat;
+                width: 100%;
+                background-size: cover;
+                border-radius: 6px 6px 0px 0px;
+                height: 200px;
+            }
+            ul{
+                padding: 25px 20px 30px;
+                li{
+                    padding: 5px 0;
+                    font-size: 16px;
+                    border-bottom: 1px solid #e7e7e7;
+                    strong{
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+

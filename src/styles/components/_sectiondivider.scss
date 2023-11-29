@@ -1,0 +1,21 @@
+@mixin animate($animation,$duration,$method,$times){
+    animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
+
+
+.divider{
+    background: url(../../asset/images/SectionDiviser.svg) center no-repeat;
+    margin: 0;
+    left: 43%;
+    top: 17%;
+    position: absolute;
+    height: 11px;
+    background-size: cover;
+    width: 193px;
+}
